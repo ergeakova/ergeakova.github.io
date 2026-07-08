@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asterlume for iOS — Privacy Policy</title>
+<meta name="description" content="Privacy Policy for Asterlume (constellation puzzle game) on iOS.">
+<style>
+  :root {
+    --bg: #08080a;
+    --surface: #121215;
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #f5f5f7;
+    --text-dim: rgba(245, 245, 247, 0.62);
+    --text-faint: rgba(245, 245, 247, 0.4);
+    --accent: #7c6cff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", sans-serif;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(124, 108, 255, 0.10), transparent 70%),
+      var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 96px; }
+
+  .back {
+    display: inline-flex; align-items: center; gap: 7px;
+    color: var(--text-dim); text-decoration: none; font-size: 14px; font-weight: 500;
+    padding: 8px 0; transition: color 0.2s ease;
+  }
+  .back:hover { color: var(--text); }
+
+  header.head { margin: 32px 0 8px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid var(--border);
+    background: rgba(124, 108, 255, 0.08);
+    padding: 6px 13px; border-radius: 99px;
+  }
+  h1 {
+    margin-top: 20px;
+    font-size: clamp(30px, 6vw, 44px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1;
+  }
+  .updated { margin-top: 12px; color: var(--text-faint); font-size: 14px; }
+
+  h2 {
+    margin: 40px 0 12px; font-size: 21px; font-weight: 650; letter-spacing: -0.02em;
+    padding-top: 20px; border-top: 1px solid var(--border);
+  }
+  h3 { margin: 24px 0 8px; font-size: 16.5px; font-weight: 600; color: var(--text); }
+  p { margin-top: 12px; color: var(--text-dim); font-size: 15.5px; }
+  ul { margin: 12px 0 0 20px; color: var(--text-dim); font-size: 15.5px; }
+  li { margin-top: 8px; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent); text-decoration: none; word-break: break-word; }
+  a:hover { text-decoration: underline; }
+
+  .callout {
+    margin-top: 28px; padding: 18px 22px 20px;
+    background: rgba(124, 108, 255, 0.07);
+    border: 1px solid rgba(124, 108, 255, 0.2); border-radius: 16px;
+    font-size: 15px; color: var(--text-dim);
+  }
+  .callout strong { color: var(--text); }
+  .callout ul { margin: 8px 0 0 18px; }
+
+  footer {
+    margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border);
+    color: var(--text-faint); font-size: 13.5px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="/">&larr; Erge Akova</a>
+
+  <header class="head">
+    <span class="badge">Asterlume &middot; iOS</span>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Effective date: 6 July 2026</p>
+  </header>
+
+  <div class="callout">
+    <strong>In short</strong>
+    <ul>
+      <li>Asterlume does not require an account. We never ask for your name, email address, or contacts.</li>
+      <li>Your game progress is stored only on your device.</li>
+      <li>The app shows ads (Google AdMob) and uses analytics and crash reporting (Google Firebase). These services collect limited device data, described below.</li>
+      <li>Personalized ads are shown only with your consent. You can say no and still play everything.</li>
+      <li>We never sell your personal data.</li>
+    </ul>
+  </div>
+
+  <h2>1. Who We Are</h2>
+  <p>
+    Asterlume (“we”, “us”) is a constellation puzzle game for iOS. This policy explains what data is
+    processed when you use the app and what choices you have. If anything here is unclear, contact
+    us at <a href="mailto:dev.ergeakova@gmail.com">dev.ergeakova@gmail.com</a>.
+  </p>
+
+  <h2>2. Data We Do Not Collect</h2>
+  <ul>
+    <li><strong>No account or registration</strong> — we do not collect names, email addresses, phone numbers, or passwords.</li>
+    <li><strong>No precise location.</strong> The app never requests GPS access.</li>
+    <li><strong>No access</strong> to your contacts, microphone, camera, or existing photos.</li>
+    <li>Your puzzle progress, streaks, and settings are stored locally on your device and are not uploaded to any server we operate. We do not operate any backend servers of our own.</li>
+  </ul>
+
+  <h2>3. Data Collected by Third-Party Services</h2>
+  <p>
+    Asterlume uses a small number of third-party services from Google. They automatically collect
+    certain device data when you use the app.
+  </p>
+
+  <h3>Google AdMob (advertising)</h3>
+  <p>Asterlume is free and supported by ads. To serve and measure ads, Google AdMob may collect:</p>
+  <ul>
+    <li>Device identifiers, including the advertising identifier (IDFA) — only if you allow tracking (see Section 4);</li>
+    <li>IP address and coarse, city-level location derived from it;</li>
+    <li>Device information (model, operating system, language);</li>
+    <li>Ad interaction data (which ads were shown, viewed, or tapped).</li>
+  </ul>
+  <p>
+    Details: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+    and <a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener">how Google uses data from apps that use its services</a>.
+  </p>
+
+  <h3>Google Firebase Analytics (usage analytics)</h3>
+  <p>
+    We use anonymous usage analytics to understand how the game is played and to improve it — for
+    example which levels are started and completed, how long puzzles take, and which settings are
+    used. Firebase Analytics collects a random app-instance identifier and general device
+    information. These events do not include your name or any content that identifies you personally.
+  </p>
+
+  <h3>Google Firebase Crashlytics (crash reporting)</h3>
+  <p>
+    If the app crashes, a crash report is sent so we can find and fix the bug. Reports include the
+    crash stack trace, device model, operating system version, and the device state at the time of
+    the crash. They do not include personal information.
+  </p>
+
+  <h3>Google Firebase Remote Config (app configuration)</h3>
+  <p>
+    Used to adjust game settings (such as feature availability) without an app update. It uses the
+    same app-instance identifier as Firebase Analytics and does not collect additional personal data.
+  </p>
+
+  <h2>4. Tracking and Your Choices</h2>
+  <p>
+    <strong>App Tracking Transparency (ATT).</strong> On first use, iOS asks whether Asterlume may
+    track you across other companies’ apps and websites. This controls access to your device’s
+    advertising identifier (IDFA):
+  </p>
+  <ul>
+    <li>If you allow tracking, ads may be personalized to your interests.</li>
+    <li>If you decline, you still see ads, but they are not based on cross-app tracking.</li>
+  </ul>
+  <p>You can change this anytime in <strong>iOS Settings &rsaquo; Privacy &amp; Security &rsaquo; Tracking</strong>.</p>
+  <p>
+    <strong>Ad consent (EEA, UK, and Switzerland).</strong> If you are in a region covered by the
+    GDPR, a consent form (Google User Messaging Platform) is shown before any ads load. You can
+    choose non-personalized ads or decline consent, and you can revisit your choice later from the
+    app’s settings where required.
+  </p>
+
+  <h2>5. Photos Permission</h2>
+  <p>
+    Asterlume can save constellation wallpapers you create to your photo library. This permission is
+    add-only: the app can save new images but cannot read, browse, or upload your existing photos.
+    Wallpapers are generated on your device and never leave it.
+  </p>
+
+  <h2>6. Notifications</h2>
+  <p>
+    If you enable notifications, the app schedules local reminders (for example, daily puzzle
+    reminders) directly on your device. We do not operate a push notification server, and no data is
+    sent anywhere to deliver these reminders. You can turn them off anytime in iOS Settings.
+  </p>
+
+  <h2>7. Data Sharing</h2>
+  <p>
+    We do not sell personal data, and we do not share it with anyone except the Google services
+    listed in Section 3, which process it to provide advertising, analytics, and crash reporting.
+    Google’s processing is governed by its own privacy policy.
+  </p>
+
+  <h2>8. Data Retention</h2>
+  <p>
+    We do not store personal data on our own servers. Data collected by Google services is retained
+    according to Google’s retention policies — for example, Firebase Analytics data is retained for a
+    limited period before being deleted or aggregated. Game progress stored on your device remains
+    until you delete the app or reset progress in the app’s settings.
+  </p>
+
+  <h2>9. Children’s Privacy</h2>
+  <p>
+    Asterlume is not directed at children under 13 (or the equivalent minimum age in your
+    jurisdiction), and we do not knowingly collect personal data from children. If you believe a
+    child has provided personal data through the app, contact us at
+    <a href="mailto:dev.ergeakova@gmail.com">dev.ergeakova@gmail.com</a> and we will take appropriate
+    steps.
+  </p>
+
+  <h2>10. Your Rights</h2>
+  <p>
+    Depending on where you live (for example under the GDPR or CCPA), you may have rights to access,
+    correct, delete, or object to the processing of your personal data. Because we do not hold
+    personal data ourselves, most requests are best directed through your device controls:
+  </p>
+  <ul>
+    <li>Withdraw tracking permission in iOS Settings &rsaquo; Privacy &amp; Security &rsaquo; Tracking;</li>
+    <li>Reset or delete your advertising identifier in iOS Settings;</li>
+    <li>Delete the app to remove all locally stored game data.</li>
+  </ul>
+  <p>
+    For anything else, email us at <a href="mailto:dev.ergeakova@gmail.com">dev.ergeakova@gmail.com</a>
+    and we will help, including forwarding requests to our service providers where applicable. We do
+    not discriminate against you for exercising your privacy rights.
+  </p>
+
+  <h2>11. Changes to This Policy</h2>
+  <p>
+    If we change this policy — for example when adding new features — we will update this page and
+    the effective date above. Significant changes will be noted in the app where appropriate.
+  </p>
+
+  <h2>12. Contact</h2>
+  <p>
+    Questions or requests: <a href="mailto:dev.ergeakova@gmail.com">dev.ergeakova@gmail.com</a>.
+  </p>
+
+  <footer>
+    © 2026 Erge Akova · Asterlume for iOS
+  </footer>
+</div>
+</body>
+</html>
