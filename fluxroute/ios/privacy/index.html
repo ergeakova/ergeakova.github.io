@@ -27,7 +27,7 @@
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 96px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 96px; }
 
   .back {
     display: inline-flex; align-items: center; gap: 7px;
@@ -50,46 +50,19 @@
   }
   .updated { margin-top: 12px; color: var(--text-faint); font-size: 14px; }
 
-  nav.jump { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 26px; }
-  nav.jump a {
-    font-size: 13.5px; font-weight: 500; color: var(--text-dim); text-decoration: none;
-    border: 1px solid var(--border); background: rgba(255,255,255,0.03);
-    padding: 8px 16px; border-radius: 99px; transition: color 0.2s ease, border-color 0.2s ease;
-  }
-  nav.jump a:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
-
-  section { scroll-margin-top: 24px; }
-  section + section { margin-top: 20px; }
+  .intro { margin-top: 28px; font-size: 17px; color: var(--text-dim); }
 
   h2 {
-    margin: 44px 0 12px; font-size: 25px; font-weight: 700; letter-spacing: -0.025em;
-    padding-top: 24px; border-top: 1px solid var(--border);
+    margin: 40px 0 12px; font-size: 21px; font-weight: 650; letter-spacing: -0.02em;
+    padding-top: 20px; border-top: 1px solid var(--border);
   }
-  h3 { margin: 30px 0 8px; font-size: 19px; font-weight: 650; letter-spacing: -0.02em; }
-  h4 { margin: 22px 0 6px; font-size: 15.5px; font-weight: 600; color: var(--text); }
   p { margin-top: 12px; color: var(--text-dim); font-size: 15.5px; }
   ul { margin: 12px 0 0 20px; color: var(--text-dim); font-size: 15.5px; }
+  ul ul { margin: 8px 0 0 18px; }
   li { margin-top: 8px; }
-  strong, b { color: var(--text); font-weight: 600; }
+  strong { color: var(--text); font-weight: 600; }
   a { color: var(--accent); text-decoration: none; word-break: break-word; }
   a:hover { text-decoration: underline; }
-
-  .callout {
-    margin-top: 20px; padding: 18px 22px 20px;
-    background: rgba(124, 108, 255, 0.07);
-    border: 1px solid rgba(124, 108, 255, 0.2); border-radius: 16px;
-    font-size: 15px; color: var(--text-dim);
-  }
-  .callout strong, .callout b { color: var(--text); }
-
-  .tbl-wrap { margin-top: 16px; overflow-x: auto; }
-  .tbl { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 460px; }
-  .tbl th, .tbl td {
-    text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top;
-  }
-  .tbl th { color: var(--text); font-weight: 600; }
-  .tbl td { color: var(--text-dim); }
-  .tbl tr:last-child td { border-bottom: none; }
 
   footer {
     margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border);
@@ -104,175 +77,98 @@
   <header class="head">
     <span class="badge">FluxRoute &middot; iOS</span>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 20 July 2026 · Applies to: FluxRoute for iOS</p>
+    <p class="updated">Last updated: 22 July 2026</p>
   </header>
 
+  <p class="intro">
+    FluxRoute (“the app”) is a puzzle game developed by <strong>Erge Akova</strong> (“we”, “us”).
+    This policy explains what data the app handles and why. The app has no accounts, no sign-in, and
+    no in-app purchases. We do not sell your personal data.
+  </p>
 
-  <!-- ===================== PRIVACY (EN) ===================== -->
-  <section id="privacy">
+  <h2>1. Data stored on your device</h2>
+  <p>
+    Your game progress and preferences stay on your device and are not uploaded to us: level progress
+    and stars, coins, hints, daily streak, missions, season progress, weekly event progress, unlocked
+    themes and arrow skins, daily reward state, selected language, sound/music/haptics settings and
+    reminder time. Deleting the app removes this data.
+  </p>
 
-    <div class="callout">
-      <b>In short:</b> FluxRoute needs no account. Your game progress stays on your device. The app is
-      free and shows ads through Google AdMob, which may use a device advertising identifier —
-      personalized only if you allow tracking. We also use Google Firebase for anonymous analytics and
-      crash reports. We don’t sell your personal data.
-    </div>
+  <h2>2. Data processed by third parties</h2>
+  <p>The app is free and supported by advertising. Three Google services are involved:</p>
+  <ul>
+    <li>
+      <strong>Google AdMob (advertising).</strong> To serve ads, AdMob may process your device
+      advertising identifier (Apple IDFA), IP address, device and OS information, and ad interaction
+      data. Ads are personalised only if you allow tracking; otherwise you see non-personalised ads.
+      Google’s policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>
+    </li>
+    <li>
+      <strong>Google User Messaging Platform (consent).</strong> In the EEA, UK and Switzerland the
+      app shows a consent form before ads are requested and stores your choice on the device.
+    </li>
+    <li>
+      <strong>Google Firebase (analytics, crash reporting, configuration).</strong>
+      <ul>
+        <li><strong>Analytics</strong> — anonymous gameplay events such as a level being started, completed or failed, score and combo, daily challenge completion, streak milestones, rewards claimed, and which ad format was shown.</li>
+        <li><strong>Crashlytics</strong> — crash stack traces with device model, OS version and app version.</li>
+        <li><strong>Remote Config</strong> — fetches settings such as ad frequency.</li>
+      </ul>
+      These are tied to a random app-instance identifier, not to your name or Apple ID. Firebase
+      privacy: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a>
+    </li>
+  </ul>
 
-    <h2>1. Who we are</h2>
-    <p>
-      FluxRoute (“the app”) is developed and operated by <strong>Erge Akova</strong> (“we”, “us”,
-      “our”), the data controller for the limited data described below. Contact:
-      <a href="mailto:dev.ergeakova@gmail.com">dev.ergeakova@gmail.com</a>. Jurisdiction: Türkiye.
-    </p>
+  <h2>3. What we never collect</h2>
+  <p>
+    Your name, email address, phone number, contacts, photos, precise location, health data, or any
+    account credentials. The app does not ask you to sign in and has no server of its own.
+  </p>
 
-    <h2>2. Information we collect and process</h2>
+  <h2>4. App Tracking Transparency</h2>
+  <p>
+    Before the advertising identifier can be used for tracking, iOS asks for your permission. We
+    request this after you finish your first level, not on first launch. You can change your answer
+    at any time in <strong>Settings → Privacy &amp; Security → Tracking</strong>.
+  </p>
 
-    <h3>a) Data stored on your device (not transmitted to us)</h3>
-    <p>
-      Gameplay and preferences are saved locally on your device and are not sent to us: level progress
-      and stars, coins, hints, streaks and freezes, missions, season/league points, unlocked themes and
-      arrow skins, daily reward state, selected language, and settings (sound, music, haptics,
-      appearance, color-blind mode, reminder time, notification preference). We have no server and
-      cannot see this data.
-    </p>
+  <h2>5. Notifications</h2>
+  <p>
+    Reminders are scheduled locally on your device. We do not operate a push server and cannot send
+    you messages. You can turn reminders off in the app’s settings or in iOS Settings.
+  </p>
 
-    <h3>b) Advertising data (Google AdMob)</h3>
-    <p>
-      The app is free and ad-supported through Google AdMob (Google Ireland Limited / Google LLC). To
-      serve, cap, and measure ads, AdMob and its partners may collect and process:
-    </p>
-    <ul>
-      <li>A device <b>advertising identifier</b> (Apple IDFA) and/or Google advertising ID;</li>
-      <li><b>IP address</b> and derived <b>approximate (coarse) location</b> (e.g., country/region);</li>
-      <li><b>Device information</b> — device model, operating system version, language, and similar technical data;</li>
-      <li><b>Ad interaction data</b> — ads shown, clicks, and diagnostics needed to prevent fraud and abuse.</li>
-    </ul>
-    <p>
-      <b>Personalized ads</b> are shown only if you grant permission through Apple’s App Tracking
-      Transparency (ATT) prompt. If you decline, ads are <b>non-personalized</b> (contextual). Learn
-      more: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information</a>
-      · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
-    </p>
+  <h2>6. Your rights (EEA/UK)</h2>
+  <p>
+    You can request access to, correction of, or erasure of personal data, object to processing, and
+    lodge a complaint with your local data protection authority. Because we hold no accounts and no
+    server-side profile, most data is either on your device (delete the app) or held by Google under
+    its own policy. You can withdraw or change advertising consent at any time from
+    <strong>Settings → Privacy &amp; ads → Ad privacy options</strong> inside the app.
+  </p>
 
-    <h3>c) Game Center (Apple)</h3>
-    <p>
-      If you use leaderboards or achievements, Apple’s Game Center processes your Game Center player
-      identifier, display name, scores, and achievement progress. This is handled by Apple under its
-      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.
-      Game Center is optional.
-    </p>
+  <h2>7. Retention</h2>
+  <p>
+    On-device data is kept until you delete the app. Advertising identifiers are managed by iOS and
+    can be reset or limited in iOS Settings. Google retains data it processes according to its own
+    retention policy.
+  </p>
 
-    <h3>d) Analytics, crash reporting &amp; configuration (Google Firebase)</h3>
-    <p>
-      The app uses Google Firebase (Google Ireland Limited / Google LLC). These services process a
-      random, app-generated <b>app-instance identifier</b> — not your name, email or Apple ID:
-    </p>
-    <ul>
-      <li><b>Firebase Analytics</b> — anonymous usage events such as which levels are started, completed or failed, scores and combos, daily-streak milestones, mission and reward interactions, and which ad formats were shown. Used to understand how the game is played and to improve it.</li>
-      <li><b>Firebase Crashlytics</b> — crash and error reports: stack traces, device model, operating system version and app version, so we can find and fix bugs.</li>
-      <li><b>Firebase Remote Config</b> — fetches configuration values (for example ad frequency and feature flags). It does not collect personal data beyond the app-instance identifier.</li>
-    </ul>
-    <p>
-      Apple may additionally provide us aggregate, anonymized diagnostics if you opted in to share
-      analytics with developers in your iOS settings. Learn more:
-      <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy &amp; security</a>
-      · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
-    </p>
+  <h2>8. Children</h2>
+  <p>
+    FluxRoute is rated 4+ and contains no objectionable content. It is not directed at children under
+    13, and we do not knowingly collect personal information from children. If you believe a child
+    has provided personal data, contact us and we will address it.
+  </p>
 
-    <h3>What we do NOT collect</h3>
-    <p>
-      We do not collect your name, email address, phone number, contacts, photos, files, precise GPS
-      location, or health data. The app has no login or user account.
-    </p>
+  <h2>9. Changes</h2>
+  <p>
+    We may update this policy. The “Last updated” date above will change; material changes will be
+    reflected on this page.
+  </p>
 
-    <h2>3. How and why we use information</h2>
-    <div class="tbl-wrap">
-      <table class="tbl">
-        <thead>
-          <tr><th>Purpose</th><th>Data</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Provide and run the game, save your progress</td><td>On-device data (section 2a)</td></tr>
-          <tr><td>Show and measure ads that keep the app free</td><td>Advertising data (2b)</td></tr>
-          <tr><td>Personalize ads (only with your consent)</td><td>Advertising identifier (2b)</td></tr>
-          <tr><td>Global leaderboards &amp; achievements (optional)</td><td>Game Center data (2c)</td></tr>
-          <tr><td>Prevent fraud/abuse, keep the service secure</td><td>Advertising &amp; device data (2b)</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h2>4. Legal bases (EEA / UK)</h2>
-    <p>
-      Where the GDPR/UK GDPR applies, we rely on: <b>legitimate interests</b> to operate the game and
-      show non-personalized ads and to keep the service secure; and your <b>consent</b> (via the ATT
-      prompt and any consent form) for personalized advertising and the use of the advertising
-      identifier for tracking. You can withdraw consent at any time (see section 6).
-    </p>
-
-    <h2>5. Sharing &amp; third parties</h2>
-    <p>We do not sell your personal data. Data described above is processed by:</p>
-    <ul>
-      <li><b>Google</b> (AdMob advertising; Firebase Analytics, Crashlytics and Remote Config) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policy</a>.</li>
-      <li><b>Apple</b> (Game Center, App Store, iOS diagnostics) — <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">policy</a>.</li>
-    </ul>
-    <p>
-      These providers may process data on servers located in other countries; they implement their own
-      safeguards for international transfers (e.g., Standard Contractual Clauses).
-    </p>
-
-    <h2>6. Your choices &amp; rights</h2>
-    <h3>Everyone</h3>
-    <ul>
-      <li>Turn personalized ads off/on: iOS Settings → Privacy &amp; Security → Tracking.</li>
-      <li>Delete all on-device data: delete the app.</li>
-    </ul>
-    <h3>EEA / UK (GDPR)</h3>
-    <p>
-      You have the right to access, rectify, erase, restrict, or object to processing, to data
-      portability, and to withdraw consent. You may also lodge a complaint with your local data
-      protection authority. Because we hold almost no data tied to your identity, most requests are
-      handled via the device controls above; for anything else contact
-      <a href="mailto:dev.ergeakova@gmail.com">dev.ergeakova@gmail.com</a>.
-    </p>
-    <h3>California (CCPA/CPRA)</h3>
-    <p>
-      You have the right to know, delete, and opt out of the “sale” or “sharing” of personal
-      information. We do not sell data; showing personalized ads may be considered “sharing”, which
-      you can opt out of by declining the tracking prompt. You will not be discriminated against for
-      exercising these rights.
-    </p>
-
-    <h2>7. Data retention</h2>
-    <p>
-      On-device data is kept until you delete the app. Advertising identifiers are controlled by iOS
-      and can be reset or limited in Settings. Data processed by Google and Apple is retained per
-      their policies.
-    </p>
-
-    <h2>8. Security</h2>
-    <p>
-      Gameplay data is stored locally on your device. We take reasonable measures to protect the
-      limited data involved, but no method of storage or transmission is 100% secure.
-    </p>
-
-    <h2>9. Children’s privacy</h2>
-    <p>
-      FluxRoute is rated 4+ and contains no objectionable content. It is not directed at children
-      under 13 (or the equivalent minimum age in your region), and we do not knowingly collect
-      personal information from children. If you believe a child has provided personal data, contact
-      us and we will address it.
-    </p>
-
-    <h2>10. Changes to this policy</h2>
-    <p>
-      We may update this policy from time to time. Material changes will be reflected here with a new
-      “Last updated” date. Continued use of the app after changes means you accept the updated policy.
-    </p>
-
-    <h2>11. Contact</h2>
-    <p>Questions or requests: <a href="mailto:dev.ergeakova@gmail.com">dev.ergeakova@gmail.com</a></p>
-  </section>
-
+  <h2>10. Contact</h2>
+  <p><a href="mailto:dev.ergeakova@gmail.com">dev.ergeakova@gmail.com</a></p>
 
   <footer>
     © 2026 Erge Akova · FluxRoute for iOS
