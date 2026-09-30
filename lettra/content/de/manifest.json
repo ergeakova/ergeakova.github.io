@@ -1,16 +1,36 @@
 {
  "schema": 2,
  "language": "de",
- "updatedAt": "2026-09-29T23:22:19Z",
+ "updatedAt": "2026-09-30T00:59:24Z",
  "epoch": "2026-04-01",
  "series": {
+  "themehunt": [
+   {
+    "id": "000000",
+    "from": "2026-04-01",
+    "to": "2026-09-29",
+    "file": "themehunt/000000.ltr",
+    "sha256": "bf68b08aabb0f798dbd6dad10a2a15e184e24a40929df8a4ce3e5c49a84f9143",
+    "revision": 1,
+    "review": "pending"
+   },
+   {
+    "id": "000001",
+    "from": "2026-09-30",
+    "to": "2027-09-30",
+    "file": "themehunt/000001.ltr",
+    "sha256": "fa3258afbf706018d6bd9191d57dd46914f7901e346ed40b99c487dcc7e5ef56",
+    "revision": 1,
+    "review": "pending"
+   }
+  ],
   "hive": [
    {
     "id": "000000",
     "from": "2026-04-01",
     "to": "2026-09-29",
     "file": "hive/000000.ltr",
-    "sha256": "298d49908066a283f984815cecd8f4354a38e85ed2ac84f6c2e51503c327a523",
+    "sha256": "2f212c16e3e6ad0094efab567266dd4157b2f0216244176f6cd6192dbc8ecb75",
     "revision": 1,
     "review": "approved"
    },
@@ -19,9 +39,49 @@
     "from": "2026-09-30",
     "to": "2027-09-30",
     "file": "hive/000001.ltr",
-    "sha256": "8602288e907796d35e01c73bdcb50add2eddd165a396fb54e429b77bbeca7362",
+    "sha256": "9982a3c8c4dde9a1bab84a4bdcaf68ac125ac5d3f7b01bc061bb76766330cc9c",
     "revision": 1,
     "review": "approved"
+   }
+  ],
+  "groups": [
+   {
+    "id": "000000",
+    "from": "2026-04-01",
+    "to": "2026-09-29",
+    "file": "groups/000000.ltr",
+    "sha256": "daf9c765a74ac69316736a5f1a634b29715ddee9da637235aa6f47ee21dfa4d7",
+    "revision": 1,
+    "review": "pending"
+   },
+   {
+    "id": "000001",
+    "from": "2026-09-30",
+    "to": "2027-09-30",
+    "file": "groups/000001.ltr",
+    "sha256": "509d9f5c9a8229948e6095243ba15db14eeea2f90d4c130cbb6ccb5dd2d00c6d",
+    "revision": 1,
+    "review": "pending"
+   }
+  ],
+  "mini": [
+   {
+    "id": "000000",
+    "from": "2026-04-01",
+    "to": "2026-09-29",
+    "file": "mini/000000.ltr",
+    "sha256": "fd5c06b8ab451f040660885323fd2174e7ed3adfd9c24b099806699f08197c2e",
+    "revision": 1,
+    "review": "pending"
+   },
+   {
+    "id": "000001",
+    "from": "2026-09-30",
+    "to": "2027-09-30",
+    "file": "mini/000001.ltr",
+    "sha256": "cecda4d6c8fa90d6f39b96b2ece85ab8128d97d0ebb4cf92eaaf40a586cee580",
+    "revision": 1,
+    "review": "pending"
    }
   ],
   "five": [
@@ -30,7 +90,7 @@
     "from": "2026-04-01",
     "to": "2026-09-29",
     "file": "five/000000.ltr",
-    "sha256": "f929ed8075f36496b508aceb30e092b05788022a97dad35133e88008337fc054",
+    "sha256": "6fe0a315b2ab32b077d29149818080734f099c6ed25340b3e8b345f9270cd13f",
     "revision": 1,
     "review": "approved"
    },
@@ -39,7 +99,7 @@
     "from": "2026-09-30",
     "to": "2027-09-30",
     "file": "five/000001.ltr",
-    "sha256": "4068fc6e9f667580afb5155a24b9dc6ecd07dfb52f5866c33b08daf02cc256af",
+    "sha256": "595ca00b2215df25bbf7c0ab276e80811d279991a5c4751099b8844d04985274",
     "revision": 1,
     "review": "approved"
    }
