@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lettra — Daily word puzzles</title>
+<meta name="description" content="Lettra — five daily word puzzles in six languages. Opens the App Store on iPhone and iPad.">
+<meta property="og:title" content="Lettra — Daily word puzzles">
+<meta property="og:description" content="Theme Hunt, Honeycomb, Links, Mini Crossword and Five Letters — new every day.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B0B0B">
+<meta name="robots" content="noindex">
+<script>
+  (function () {
+    // App Store adresi (https://apps.apple.com/app/id<Apple ID>) App Store Connect kaydından sonra doldurulur; boşken yönlendirme yapılmaz.
+    var IOS_URL = "";
+    var ua = navigator.userAgent || navigator.vendor || "";
+    var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+                (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    if (IOS_URL && isIOS) location.replace(IOS_URL);
+    window.LETTRA_IOS_URL = IOS_URL;
+  })();
+</script>
+<style>
+  /* Lettra 2a Domates + logo 4h Petek — uygulamadaki Palette (koyu) ile aynı. */
+  :root { --bg:#0B0B0B; --surface:#1A1A1A; --line:#2E2E2E; --text:#F2F2F0; --muted:#A0A0A0; --accent:#FF5A43; --on-accent:#1A0500; --dot:#E8B930; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif;
+    background:var(--bg); color:var(--text); min-height:100vh;
+    display:flex; align-items:center; justify-content:center; padding:24px;
+    -webkit-font-smoothing:antialiased; text-align:center;
+  }
+  .card { max-width:400px; width:100%; }
+  .mark { font-size:48px; font-weight:800; letter-spacing:-.025em; display:inline-flex; align-items:baseline; }
+  .mark span { display:inline-block; width:.2em; height:.2em; background:var(--dot); border-radius:50%; margin-left:.06em; }
+  p { margin-top:12px; color:var(--muted); font-size:16px; line-height:1.45; }
+  .games { margin-top:22px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .games div:last-child:nth-child(odd) { grid-column: span 2; }
+  .games div { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:12px 8px; font-size:14px; font-weight:600; }
+  .btn {
+    margin-top:28px; display:inline-flex; align-items:center; justify-content:center;
+    padding:14px 24px; border-radius:999px; font-size:15px; font-weight:700;
+    text-decoration:none; color:var(--on-accent); background:var(--accent);
+  }
+  .soon { margin-top:28px; display:inline-block; padding:10px 16px; border:1px solid var(--line); border-radius:999px; font-size:14px; color:var(--muted); }
+  footer { margin-top:36px; font-size:13px; }
+  footer a { color:var(--muted); }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="mark" aria-label="Lettra">Lettra<span></span></div>
+  <p id="tagline">Five daily word puzzles in six languages.</p>
+  <div class="games">
+    <div id="g0">Theme Hunt</div><div id="g1">Honeycomb</div>
+    <div id="g2">Links</div><div id="g3">Mini Crossword</div>
+    <div id="g4">Five Letters</div>
+  </div>
+  <a class="btn" id="store" href="#" hidden>Download on the App Store</a>
+  <span class="soon" id="soon">Coming soon to the App Store</span>
+  <footer><a id="privacy" href="/lettra/ios/privacy/">Privacy Policy</a></footer>
+</div>
+<script>
+  // Oyun adları uygulamadaki String Catalog ile aynı.
+  var T = {
+    en: ["Five daily word puzzles in six languages.", ["Theme Hunt", "Honeycomb", "Links", "Mini Crossword", "Five Letters"], "Download on the App Store", "Coming soon to the App Store", "Privacy Policy"],
+    tr: ["Altı dilde, her gün beş kelime bulmacası.", ["Tema Avı", "Petek", "Bağlantılar", "Mini Bulmaca", "Beş Harf"], "App Store'dan indir", "Yakında App Store'da", "Gizlilik Politikası"],
+    de: ["Jeden Tag fünf Worträtsel, in sechs Sprachen.", ["Themenjagd", "Wabe", "Gruppen", "Mini-Kreuzworträtsel", "Fünf Buchstaben"], "Im App Store laden", "Bald im App Store", "Datenschutzerklärung"],
+    es: ["Cinco juegos de palabras al día, en seis idiomas.", ["Caza de temas", "Panal", "Grupos", "Minicrucigrama", "Cinco letras"], "Descargar en el App Store", "Muy pronto en el App Store", "Política de privacidad"],
+    it: ["Cinque giochi di parole al giorno, in sei lingue.", ["Caccia al tema", "Favo", "Gruppi", "Mini cruciverba", "Cinque lettere"], "Scarica su App Store", "Presto su App Store", "Informativa sulla privacy"],
+    pt: ["Cinco jogos de palavras por dia, em seis idiomas.", ["Caça ao tema", "Favo", "Grupos", "Minicruzadinha", "Cinco letras"], "Baixar na App Store", "Em breve na App Store", "Política de Privacidade"],
+    fr: ["Cinq jeux de mots par jour, en six langues.", ["Chasse au thème", "Alvéole", "Groupes", "Mini mots croisés", "Cinq lettres"], "Télécharger dans l'App Store", "Bientôt sur l'App Store", "Politique de confidentialité"]
+  };
+  var langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"]);
+  var code = "en";
+  for (var i = 0; i < langs.length; i++) {
+    var c = (langs[i] || "").toLowerCase().split("-")[0];
+    if (T[c]) { code = c; break; }
+  }
+  var t = T[code];
+  document.documentElement.lang = code;
+  document.getElementById("tagline").textContent = t[0];
+  for (var g = 0; g < 5; g++) document.getElementById("g" + g).textContent = t[1][g];
+  document.getElementById("store").textContent = t[2];
+  document.getElementById("soon").textContent = t[3];
+  document.getElementById("privacy").textContent = t[4];
+  if (window.LETTRA_IOS_URL) {
+    var a = document.getElementById("store");
+    a.href = window.LETTRA_IOS_URL;
+    a.hidden = false;
+    document.getElementById("soon").hidden = true;
+  }
+</script>
+</body>
+</html>

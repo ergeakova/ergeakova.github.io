@@ -1,0 +1,48 @@
+{
+ "schema": 2,
+ "language": "fr",
+ "updatedAt": "2026-09-29T23:22:23Z",
+ "epoch": "2026-04-01",
+ "series": {
+  "hive": [
+   {
+    "id": "000000",
+    "from": "2026-04-01",
+    "to": "2026-09-29",
+    "file": "hive/000000.ltr",
+    "sha256": "2bbb7b9d5d47d1e7d4d7470e29a850b0de6da0acfa4d096112438d9c6578054c",
+    "revision": 1,
+    "review": "approved"
+   },
+   {
+    "id": "000001",
+    "from": "2026-09-30",
+    "to": "2027-09-30",
+    "file": "hive/000001.ltr",
+    "sha256": "842ce52362fbb00f03534c2834d48d4dc29e30be2fab9f359ec5375014859b00",
+    "revision": 1,
+    "review": "approved"
+   }
+  ],
+  "five": [
+   {
+    "id": "000000",
+    "from": "2026-04-01",
+    "to": "2026-09-29",
+    "file": "five/000000.ltr",
+    "sha256": "0be1b7fefef55483068ca0c2e7c475aa67b18bee3a12065e125b70346ed0b31f",
+    "revision": 1,
+    "review": "approved"
+   },
+   {
+    "id": "000001",
+    "from": "2026-09-30",
+    "to": "2027-09-30",
+    "file": "five/000001.ltr",
+    "sha256": "ad293ef408be31f84db21a40442784af446b2dd05b28d38cba42419398c25ba7",
+    "revision": 1,
+    "review": "approved"
+   }
+  ]
+ }
+}
