@@ -1,7 +1,7 @@
 {
  "schema": 2,
- "language": "de",
- "updatedAt": "2026-10-01T06:40:36Z",
+ "language": "en",
+ "updatedAt": "2026-10-01T06:40:42Z",
  "epoch": "2026-04-01",
  "series": {
   "themehunt": [
@@ -10,7 +10,7 @@
     "from": "2026-04-01",
     "to": "2026-09-29",
     "file": "themehunt/000000.ltr",
-    "sha256": "bf68b08aabb0f798dbd6dad10a2a15e184e24a40929df8a4ce3e5c49a84f9143",
+    "sha256": "af3c50ca62ae4a359a11641f920b5ac4db27359c57d00b2adbe13b574178cb58",
     "revision": 1,
     "review": "pending"
    },
@@ -19,7 +19,7 @@
     "from": "2026-09-30",
     "to": "2027-09-30",
     "file": "themehunt/000001.ltr",
-    "sha256": "fa3258afbf706018d6bd9191d57dd46914f7901e346ed40b99c487dcc7e5ef56",
+    "sha256": "167f46b2f837047a7155c2562a7b132d198b035e46de63f3072b1e90db491968",
     "revision": 1,
     "review": "pending"
    }
@@ -30,7 +30,7 @@
     "from": "2026-04-01",
     "to": "2026-09-29",
     "file": "hive/000000.ltr",
-    "sha256": "2f212c16e3e6ad0094efab567266dd4157b2f0216244176f6cd6192dbc8ecb75",
+    "sha256": "8cc5d14918e0dbe0cddbc65f7204b3213ecdeebccb9c07cfa389e39e7ab200c0",
     "revision": 1,
     "review": "approved"
    },
@@ -39,7 +39,7 @@
     "from": "2026-09-30",
     "to": "2027-09-30",
     "file": "hive/000001.ltr",
-    "sha256": "9982a3c8c4dde9a1bab84a4bdcaf68ac125ac5d3f7b01bc061bb76766330cc9c",
+    "sha256": "d4ce618d020e13032e9cc48f105988f00a0fd6f7518c6e62acedf30cc5205928",
     "revision": 1,
     "review": "approved"
    }
@@ -50,7 +50,7 @@
     "from": "2026-04-01",
     "to": "2026-09-29",
     "file": "groups/000000.ltr",
-    "sha256": "daf9c765a74ac69316736a5f1a634b29715ddee9da637235aa6f47ee21dfa4d7",
+    "sha256": "dfdec22b99b1489229465ddd0ebdbced32309aec4189fab2f627b5ce0d5e3940",
     "revision": 1,
     "review": "pending"
    },
@@ -59,7 +59,7 @@
     "from": "2026-09-30",
     "to": "2027-09-30",
     "file": "groups/000001.ltr",
-    "sha256": "509d9f5c9a8229948e6095243ba15db14eeea2f90d4c130cbb6ccb5dd2d00c6d",
+    "sha256": "4a5e876f3423b6a07a73b4911216bf7c4f6d1f255ba82cb98ad983ca6e5e0f9c",
     "revision": 1,
     "review": "pending"
    }
@@ -70,7 +70,7 @@
     "from": "2026-04-01",
     "to": "2026-09-29",
     "file": "mini/000000.ltr",
-    "sha256": "fd5c06b8ab451f040660885323fd2174e7ed3adfd9c24b099806699f08197c2e",
+    "sha256": "f359ff3fd7082c4fbe0ea66d6e1fc5e95694ae7958efd0c26b83a3288239e410",
     "revision": 1,
     "review": "pending"
    },
@@ -79,7 +79,7 @@
     "from": "2026-09-30",
     "to": "2027-09-30",
     "file": "mini/000001.ltr",
-    "sha256": "cecda4d6c8fa90d6f39b96b2ece85ab8128d97d0ebb4cf92eaaf40a586cee580",
+    "sha256": "3e5bbe2b880c9d9fecb1b2ea5058a5c1a37449ca598d1f11562415a536c8778f",
     "revision": 1,
     "review": "pending"
    }
@@ -90,7 +90,7 @@
     "from": "2026-04-01",
     "to": "2026-09-29",
     "file": "five/000000.ltr",
-    "sha256": "6fe0a315b2ab32b077d29149818080734f099c6ed25340b3e8b345f9270cd13f",
+    "sha256": "f254dbb424f6245f5f75e9765458eb21fb1bef49d486bdb2565f3353ae1f0970",
     "revision": 1,
     "review": "approved"
    },
@@ -99,7 +99,7 @@
     "from": "2026-09-30",
     "to": "2027-09-30",
     "file": "five/000001.ltr",
-    "sha256": "595ca00b2215df25bbf7c0ab276e80811d279991a5c4751099b8844d04985274",
+    "sha256": "7d1d2fd83fc52f8b975b94378ecdefac93511cea73bc194e78820d53d446de16",
     "revision": 1,
     "review": "approved"
    }

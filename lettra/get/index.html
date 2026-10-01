@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lettra — Daily word puzzles</title>
-<meta name="description" content="Lettra — five daily word puzzles in six languages. Opens the App Store on iPhone and iPad.">
+<meta name="description" content="Lettra — five daily word puzzles in seven languages. Opens the App Store on iPhone and iPad.">
 <meta property="og:title" content="Lettra — Daily word puzzles">
 <meta property="og:description" content="Theme Hunt, Honeycomb, Links, Mini Crossword and Five Letters — new every day.">
 <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
 <body>
 <div class="card">
   <div class="mark" aria-label="Lettra">Lettra<span></span></div>
-  <p id="tagline">Five daily word puzzles in six languages.</p>
+  <p id="tagline">Five daily word puzzles in seven languages.</p>
   <div class="games">
     <div id="g0">Theme Hunt</div><div id="g1">Honeycomb</div>
     <div id="g2">Links</div><div id="g3">Mini Crossword</div>
@@ -65,13 +65,13 @@
 <script>
   // Oyun adları uygulamadaki String Catalog ile aynı.
   var T = {
-    en: ["Five daily word puzzles in six languages.", ["Theme Hunt", "Honeycomb", "Links", "Mini Crossword", "Five Letters"], "Download on the App Store", "Coming soon to the App Store", "Privacy Policy"],
-    tr: ["Altı dilde, her gün beş kelime bulmacası.", ["Tema Avı", "Petek", "Bağlantılar", "Mini Bulmaca", "Beş Harf"], "App Store'dan indir", "Yakında App Store'da", "Gizlilik Politikası"],
-    de: ["Jeden Tag fünf Worträtsel, in sechs Sprachen.", ["Themenjagd", "Wabe", "Gruppen", "Mini-Kreuzworträtsel", "Fünf Buchstaben"], "Im App Store laden", "Bald im App Store", "Datenschutzerklärung"],
-    es: ["Cinco juegos de palabras al día, en seis idiomas.", ["Caza de temas", "Panal", "Grupos", "Minicrucigrama", "Cinco letras"], "Descargar en el App Store", "Muy pronto en el App Store", "Política de privacidad"],
-    it: ["Cinque giochi di parole al giorno, in sei lingue.", ["Caccia al tema", "Favo", "Gruppi", "Mini cruciverba", "Cinque lettere"], "Scarica su App Store", "Presto su App Store", "Informativa sulla privacy"],
-    pt: ["Cinco jogos de palavras por dia, em seis idiomas.", ["Caça ao tema", "Favo", "Grupos", "Minicruzadinha", "Cinco letras"], "Baixar na App Store", "Em breve na App Store", "Política de Privacidade"],
-    fr: ["Cinq jeux de mots par jour, en six langues.", ["Chasse au thème", "Alvéole", "Groupes", "Mini mots croisés", "Cinq lettres"], "Télécharger dans l'App Store", "Bientôt sur l'App Store", "Politique de confidentialité"]
+    en: ["Five daily word puzzles in seven languages.", ["Theme Hunt", "Honeycomb", "Links", "Mini Crossword", "Five Letters"], "Download on the App Store", "Coming soon to the App Store", "Privacy Policy"],
+    tr: ["Yedi dilde, her gün beş kelime bulmacası.", ["Tema Avı", "Petek", "Bağlantılar", "Mini Bulmaca", "Beş Harf"], "App Store'dan indir", "Yakında App Store'da", "Gizlilik Politikası"],
+    de: ["Jeden Tag fünf Worträtsel, in sieben Sprachen.", ["Themenjagd", "Wabe", "Gruppen", "Mini-Kreuzworträtsel", "Fünf Buchstaben"], "Im App Store laden", "Bald im App Store", "Datenschutzerklärung"],
+    es: ["Cinco juegos de palabras al día, en siete idiomas.", ["Caza de temas", "Panal", "Grupos", "Minicrucigrama", "Cinco letras"], "Descargar en el App Store", "Muy pronto en el App Store", "Política de privacidad"],
+    it: ["Cinque giochi di parole al giorno, in sette lingue.", ["Caccia al tema", "Favo", "Gruppi", "Mini cruciverba", "Cinque lettere"], "Scarica su App Store", "Presto su App Store", "Informativa sulla privacy"],
+    pt: ["Cinco jogos de palavras por dia, em sete idiomas.", ["Caça ao tema", "Favo", "Grupos", "Minicruzadinha", "Cinco letras"], "Baixar na App Store", "Em breve na App Store", "Política de Privacidade"],
+    fr: ["Cinq jeux de mots par jour, en sept langues.", ["Chasse au thème", "Alvéole", "Groupes", "Mini mots croisés", "Cinq lettres"], "Télécharger dans l'App Store", "Bientôt sur l'App Store", "Politique de confidentialité"]
   };
   var langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"]);
   var code = "en";
