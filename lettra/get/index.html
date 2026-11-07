@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lettra — Daily word puzzles</title>
-<meta name="description" content="Lettra — five daily word puzzles in seven languages. Opens the App Store on iPhone and iPad.">
+<meta name="description" content="Lettra — five daily word puzzles in seven languages. Opens the App Store on iPhone and iPad, Google Play on Android.">
 <meta property="og:title" content="Lettra — Daily word puzzles">
 <meta property="og:description" content="Theme Hunt, Honeycomb, Links, Mini Crossword and Five Letters — new every day.">
 <meta property="og:type" content="website">
@@ -12,13 +12,16 @@
 <meta name="robots" content="noindex">
 <script>
   (function () {
-    // App Store adresi (https://apps.apple.com/app/id<Apple ID>) App Store Connect kaydından sonra doldurulur; boşken yönlendirme yapılmaz.
-    var IOS_URL = "";
+    var IOS_URL = "https://apps.apple.com/tr/app/lettra-g%C3%BCnl%C3%BCk-kelime-bulmaca/id6817296026";
+    var ANDROID_URL = "https://play.google.com/store/apps/details?id=com.ergeakova.lettra";
     var ua = navigator.userAgent || navigator.vendor || "";
     var isIOS = /iPad|iPhone|iPod/.test(ua) ||
                 (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    var isAndroid = /android/i.test(ua);
     if (IOS_URL && isIOS) location.replace(IOS_URL);
+    else if (ANDROID_URL && isAndroid) location.replace(ANDROID_URL);
     window.LETTRA_IOS_URL = IOS_URL;
+    window.LETTRA_ANDROID_URL = ANDROID_URL;
   })();
 </script>
 <style>
@@ -38,11 +41,13 @@
   .games { margin-top:22px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
   .games div:last-child:nth-child(odd) { grid-column: span 2; }
   .games div { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:12px 8px; font-size:14px; font-weight:600; }
+  .btns { margin-top:28px; display:flex; flex-direction:column; align-items:center; gap:10px; }
   .btn {
-    margin-top:28px; display:inline-flex; align-items:center; justify-content:center;
+    display:inline-flex; min-width:240px; align-items:center; justify-content:center;
     padding:14px 24px; border-radius:999px; font-size:15px; font-weight:700;
     text-decoration:none; color:var(--on-accent); background:var(--accent);
   }
+  .btn.alt { color:var(--text); background:var(--surface); border:1px solid var(--line); }
   .soon { margin-top:28px; display:inline-block; padding:10px 16px; border:1px solid var(--line); border-radius:999px; font-size:14px; color:var(--muted); }
   footer { margin-top:36px; font-size:13px; }
   footer a { color:var(--muted); }
@@ -58,20 +63,23 @@
     <div id="g2">Links</div><div id="g3">Mini Crossword</div>
     <div id="g4">Five Letters</div>
   </div>
-  <a class="btn" id="store" href="#" hidden>Download on the App Store</a>
-  <span class="soon" id="soon">Coming soon to the App Store</span>
+  <div class="btns" id="btns" hidden>
+    <a class="btn" id="store" href="#" hidden>Download on the App Store</a>
+    <a class="btn alt" id="play" href="#" hidden>Get it on Google Play</a>
+  </div>
+  <span class="soon" id="soon">Coming soon</span>
   <footer><a id="privacy" href="/lettra/ios/privacy/">Privacy Policy</a></footer>
 </div>
 <script>
   // Oyun adları uygulamadaki String Catalog ile aynı.
   var T = {
-    en: ["Five daily word puzzles in seven languages.", ["Theme Hunt", "Honeycomb", "Links", "Mini Crossword", "Five Letters"], "Download on the App Store", "Coming soon to the App Store", "Privacy Policy"],
-    tr: ["Yedi dilde, her gün beş kelime bulmacası.", ["Tema Avı", "Petek", "Bağlantılar", "Mini Bulmaca", "Beş Harf"], "App Store'dan indir", "Yakında App Store'da", "Gizlilik Politikası"],
-    de: ["Jeden Tag fünf Worträtsel, in sieben Sprachen.", ["Themenjagd", "Wabe", "Gruppen", "Mini-Kreuzworträtsel", "Fünf Buchstaben"], "Im App Store laden", "Bald im App Store", "Datenschutzerklärung"],
-    es: ["Cinco juegos de palabras al día, en siete idiomas.", ["Caza de temas", "Panal", "Grupos", "Minicrucigrama", "Cinco letras"], "Descargar en el App Store", "Muy pronto en el App Store", "Política de privacidad"],
-    it: ["Cinque giochi di parole al giorno, in sette lingue.", ["Caccia al tema", "Favo", "Gruppi", "Mini cruciverba", "Cinque lettere"], "Scarica su App Store", "Presto su App Store", "Informativa sulla privacy"],
-    pt: ["Cinco jogos de palavras por dia, em sete idiomas.", ["Caça ao tema", "Favo", "Grupos", "Minicruzadinha", "Cinco letras"], "Baixar na App Store", "Em breve na App Store", "Política de Privacidade"],
-    fr: ["Cinq jeux de mots par jour, en sept langues.", ["Chasse au thème", "Alvéole", "Groupes", "Mini mots croisés", "Cinq lettres"], "Télécharger dans l'App Store", "Bientôt sur l'App Store", "Politique de confidentialité"]
+    en: ["Five daily word puzzles in seven languages.", ["Theme Hunt", "Honeycomb", "Links", "Mini Crossword", "Five Letters"], "Download on the App Store", "Coming soon", "Privacy Policy", "Get it on Google Play"],
+    tr: ["Yedi dilde, her gün beş kelime bulmacası.", ["Tema Avı", "Petek", "Bağlantılar", "Mini Bulmaca", "Beş Harf"], "App Store'dan indir", "Yakında", "Gizlilik Politikası", "Google Play'den indir"],
+    de: ["Jeden Tag fünf Worträtsel, in sieben Sprachen.", ["Themenjagd", "Wabe", "Gruppen", "Mini-Kreuzworträtsel", "Fünf Buchstaben"], "Im App Store laden", "Demnächst verfügbar", "Datenschutzerklärung", "Jetzt bei Google Play"],
+    es: ["Cinco juegos de palabras al día, en siete idiomas.", ["Caza de temas", "Panal", "Grupos", "Minicrucigrama", "Cinco letras"], "Descargar en el App Store", "Muy pronto", "Política de privacidad", "Disponible en Google Play"],
+    it: ["Cinque giochi di parole al giorno, in sette lingue.", ["Caccia al tema", "Favo", "Gruppi", "Mini cruciverba", "Cinque lettere"], "Scarica su App Store", "Presto disponibile", "Informativa sulla privacy", "Disponibile su Google Play"],
+    pt: ["Cinco jogos de palavras por dia, em sete idiomas.", ["Caça ao tema", "Favo", "Grupos", "Minicruzadinha", "Cinco letras"], "Baixar na App Store", "Em breve", "Política de Privacidade", "Disponível no Google Play"],
+    fr: ["Cinq jeux de mots par jour, en sept langues.", ["Chasse au thème", "Alvéole", "Groupes", "Mini mots croisés", "Cinq lettres"], "Télécharger dans l'App Store", "Bientôt disponible", "Politique de confidentialité", "Disponible sur Google Play"]
   };
   var langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"]);
   var code = "en";
@@ -86,10 +94,14 @@
   document.getElementById("store").textContent = t[2];
   document.getElementById("soon").textContent = t[3];
   document.getElementById("privacy").textContent = t[4];
-  if (window.LETTRA_IOS_URL) {
-    var a = document.getElementById("store");
-    a.href = window.LETTRA_IOS_URL;
+  document.getElementById("play").textContent = t[5];
+  var links = [["store", window.LETTRA_IOS_URL], ["play", window.LETTRA_ANDROID_URL]];
+  for (var k = 0; k < links.length; k++) {
+    if (!links[k][1]) continue;
+    var a = document.getElementById(links[k][0]);
+    a.href = links[k][1];
     a.hidden = false;
+    document.getElementById("btns").hidden = false;
     document.getElementById("soon").hidden = true;
   }
 </script>
